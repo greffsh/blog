@@ -1,6 +1,8 @@
+import gleam/list
 import lustre/element
 import markdown
 import pages/blog_index
+import pages/blog_post
 import pages/home
 import simplifile
 
@@ -24,5 +26,12 @@ pub fn main() {
     |> element.to_document_string
     |> simplifile.write("./dist/blog/index.html", _)
 
-  Nil
+  list.each(posts, fn(post) {
+    let assert Ok(_) =
+      simplifile.create_directory_all("./dist/blog/" <> post.slug)
+    let assert Ok(_) =
+      blog_post.page(post)
+      |> element.to_document_string
+      |> simplifile.write("./dist/blog/" <> post.slug <> "/index.html", _)
+  })
 }

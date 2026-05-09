@@ -61,7 +61,7 @@ fn render_post_item(post: Post, index: Int) -> Element(a) {
   html.div([attribute.class(hidden)], [
     html.a(
       [
-        attribute.href("/blog/" <> post.slug),
+        attribute.href("/blog/" <> post.slug <> "/"),
         attribute.class("post-link"),
       ],
       [
@@ -73,21 +73,13 @@ fn render_post_item(post: Post, index: Int) -> Element(a) {
 }
 
 fn load_more_script() -> Element(a) {
-  element.unsafe_raw_html(
-    "script",
-    "script",
-    [],
-    "
+  element.unsafe_raw_html("script", "script", [], "
     const btn = document.getElementById('load-more');
     const items = document.querySelectorAll('.post-item');
-    let visible = "
-      <> int.to_string(posts_per_page)
-      <> ";
+    let visible = " <> int.to_string(posts_per_page) <> ";
     if (btn) {
       btn.addEventListener('click', () => {
-        const next = visible + "
-      <> int.to_string(posts_per_page)
-      <> ";
+        const next = visible + " <> int.to_string(posts_per_page) <> ";
         for (let i = visible; i < next && i < items.length; i++) {
           items[i].classList.remove('hidden');
         }
@@ -95,6 +87,5 @@ fn load_more_script() -> Element(a) {
         if (visible >= items.length) btn.style.display = 'none';
       });
     }
-  ",
-  )
+  ")
 }
