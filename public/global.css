@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #555;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.site-header nav {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.nav-link {
+  font-size: 1.125rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #fb923c;
+}
+
+.nav-link.active {
+  color: #ea580c;
+}
+
+/* ── Main layout ── */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 36rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .content-wrapper {
+    font-size: 1.125rem;
+  }
+}
+
+/* ── Sections ── */
+.about-section,
+.stack-section {
+  margin-top: 1.5rem;
+}
+
+.about-section h1,
+.stack-section h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Times New Roman", serif;
+  text-decoration: underline;
+  color: #ea580c;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+
+  .about-section h1,
+  .stack-section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.section-body {
+  margin-left: 1rem;
+}
+
+.section-body p {
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.topic-list {
+  list-style: disc;
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
