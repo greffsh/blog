@@ -3,6 +3,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
+    "highlightjs-gleam": "^0.2.2",
     "marked": "^18.0.3",
     "marked-highlight": "^2.2.4"
   }

@@ -1,9 +1,12 @@
 import { marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import hljs from "highlight.js";
+import gleamLang from "highlightjs-gleam";
 import matter from "gray-matter";
 import fs from "fs";
 import { toList } from "../prelude.mjs";
+
+hljs.registerLanguage("gleam", gleamLang);
 
 function slugify(text) {
   return text.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-").trim();
