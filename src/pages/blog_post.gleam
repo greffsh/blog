@@ -13,7 +13,7 @@ pub fn page(post: Post) -> Element(a) {
         attribute.attribute("name", "viewport"),
         attribute.attribute("content", "width=device-width, initial-scale=1.0"),
       ]),
-      html.title([], post.title <> " | greff.sh"),
+      html.title([], post.title),
       html.link([
         attribute.rel("icon"),
         attribute.attribute("type", "image/png"),

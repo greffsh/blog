@@ -16,7 +16,7 @@ pub fn page(posts: List(Post)) -> Element(a) {
         attribute.attribute("name", "viewport"),
         attribute.attribute("content", "width=device-width, initial-scale=1.0"),
       ]),
-      html.title([], "blog | greff.sh"),
+      html.title([], "blog"),
       html.link([
         attribute.rel("icon"),
         attribute.attribute("type", "image/png"),

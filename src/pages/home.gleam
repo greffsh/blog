@@ -12,7 +12,7 @@ pub fn page() -> Element(a) {
         attribute.attribute("name", "viewport"),
         attribute.attribute("content", "width=device-width, initial-scale=1.0"),
       ]),
-      html.title([], "teste.sh"),
+      html.title([], "greff.sh"),
       html.link([
         attribute.rel("icon"),
         attribute.attribute("type", "image/png"),
