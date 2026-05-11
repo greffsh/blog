@@ -6,7 +6,7 @@ import pages/blog_post
 import pages/home
 import simplifile
 
-const posts_dir = "./src/posts"
+const posts_dir = "./content"
 
 pub fn main() {
   let assert Ok(_) = simplifile.create_directory_all("./dist")
