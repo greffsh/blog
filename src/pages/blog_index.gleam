@@ -41,14 +41,24 @@ pub fn page(posts: List(Post)) -> Element(a) {
           case list.length(posts) > posts_per_page {
             True ->
               html.button(
-                [attribute.id("load-more"), attribute.class("load-more-btn")],
+                [
+                  attribute.id("load-more"),
+                  attribute.class("load-more-btn"),
+                  attribute.data("per-page", int.to_string(posts_per_page)),
+                ],
                 [element.text("Show more")],
               )
             False -> element.none()
           },
         ]),
       ]),
-      load_more_script(),
+      html.script(
+        [
+          attribute.attribute("src", "/blog.js"),
+          attribute.attribute("defer", ""),
+        ],
+        "",
+      ),
     ]),
   ])
 }
@@ -70,22 +80,4 @@ fn render_post_item(post: Post, index: Int) -> Element(a) {
       ],
     ),
   ])
-}
-
-fn load_more_script() -> Element(a) {
-  element.unsafe_raw_html("script", "script", [], "
-    const btn = document.getElementById('load-more');
-    const items = document.querySelectorAll('.post-item');
-    let visible = " <> int.to_string(posts_per_page) <> ";
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const next = visible + " <> int.to_string(posts_per_page) <> ";
-        for (let i = visible; i < next && i < items.length; i++) {
-          items[i].classList.remove('hidden');
-        }
-        visible = next;
-        if (visible >= items.length) btn.style.display = 'none';
-      });
-    }
-  ")
 }
