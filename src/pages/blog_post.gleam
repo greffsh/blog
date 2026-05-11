@@ -23,10 +23,6 @@ pub fn page(post: Post) -> Element(a) {
         attribute.rel("stylesheet"),
         attribute.attribute("href", "/global.css"),
       ]),
-      html.link([
-        attribute.rel("stylesheet"),
-        attribute.attribute("href", "/highlight.css"),
-      ]),
     ]),
     html.body([], [
       header.header("/blog"),
