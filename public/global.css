@@ -65,6 +65,16 @@ body {
   padding: 2rem 1.5rem;
 }
 
+.home-main {
+  display: block;
+  padding: 0;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .content-wrapper {
   width: 100%;
   max-width: 36rem;
@@ -74,6 +84,18 @@ body {
 @media (min-width: 640px) {
   .content-wrapper {
     font-size: 1.125rem;
+  }
+}
+
+.kakashi-divider {
+  display: none;
+  width: 31.25rem;
+  height: 36.25rem;
+}
+
+@media (min-width: 1024px) {
+  .kakashi-divider {
+    display: block;
   }
 }
 
