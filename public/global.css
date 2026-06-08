@@ -91,6 +91,8 @@ body {
   display: none;
   width: 31.25rem;
   height: 36.25rem;
+  color: transparent;
+  font-size: 0;
 }
 
 @media (min-width: 1024px) {
