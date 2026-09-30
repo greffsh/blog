@@ -33,9 +33,7 @@ pub fn page() -> Element(a) {
               html.div([attribute.class("section-body")], [
                 html.p([], [
                   element.text(
-                    "Hi there! Im greff, your good natured engineer. Im a 23 brazilian
-          software engineer and computer science enthusiast that has been deeply
-          invested in learning stuff from a wide variaty of topics, such as:",
+                    "Hi there! I'm Greff, a good-natured 24-year-old Brazilian software engineer and computer science enthusiast who's curious about a wide variety of topics, including:",
                   ),
                 ]),
                 html.ul(
@@ -43,8 +41,9 @@ pub fn page() -> Element(a) {
                   list_items([
                     "Functional Programming",
                     "Software Architecture",
-                    "Web Frameworks",
                     "Distributed Systems",
+                    "Math",
+                    "Networks",
                   ]),
                 ),
               ]),
@@ -54,21 +53,27 @@ pub fn page() -> Element(a) {
               html.div([attribute.class("section-body")], [
                 html.p([], [
                   element.text(
-                    "Currently, Im working as a fullstack engineer, developing web products
-          and AI agents. My main stack at work is:",
+                    "These days, I'm working as a software engineer, building web products and AI tools for internal teams and clients. I'm pretty tooling-agnostic, but my day-to-day stack is mostly:",
                   ),
                 ]),
                 html.ul(
                   [attribute.class("topic-list")],
                   list_items([
-                    "Typescript",
+                    "TypeScript",
                     "React",
-                    "Nest",
-                    "MongoDB",
-                    "Langchain",
-                    "Langgraph",
+                    "NestJS",
+                    "PostgreSQL",
+                    "LangChain",
+                    "LangGraph",
+                    "AWS",
                   ]),
                 ),
+                html.br([]),
+                html.p([], [
+                  element.text(
+                    "Outside work, I also like exploring languages and ideas beyond my day-to-day stack, especially Gleam, Rust, and proof assistants like Lean.",
+                  ),
+                ]),
               ]),
             ]),
           ]),
