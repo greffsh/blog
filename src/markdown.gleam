@@ -6,6 +6,7 @@ pub type Post {
     slug: String,
     title: String,
     description: String,
+    listed: Bool,
     pub_date: String,
     html: String,
     reading_time: Int,
@@ -30,6 +31,9 @@ fn do_get_description(md: String) -> String
 
 @external(javascript, "./markdown_ffi.mjs", "get_pub_date")
 fn do_get_pub_date(md: String) -> String
+
+@external(javascript, "./markdown_ffi.mjs", "is_listed")
+fn do_is_listed(md: String) -> Bool
 
 @external(javascript, "./markdown_ffi.mjs", "get_content")
 fn do_get_content(md: String) -> String
@@ -59,6 +63,7 @@ fn parse_post(slug: String, raw: String) -> Post {
     slug: slug,
     title: do_get_title(raw),
     description: do_get_description(raw),
+    listed: do_is_listed(raw),
     pub_date: do_get_pub_date(raw),
     html: do_parse_markdown(content),
     reading_time: words / 200 + 1,

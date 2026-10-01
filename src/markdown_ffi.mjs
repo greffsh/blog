@@ -71,6 +71,10 @@ export function get_pub_date(md) {
 	return matter(md).data.pubDate ?? "";
 }
 
+export function is_listed(md) {
+	return matter(md).data.listed !== false;
+}
+
 export function get_content(md) {
 	return matter(md).content;
 }

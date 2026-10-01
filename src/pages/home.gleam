@@ -64,7 +64,6 @@ pub fn page() -> Element(a) {
                     "NestJS",
                     "PostgreSQL",
                     "LangChain",
-                    "LangGraph",
                     "AWS",
                   ]),
                 ),

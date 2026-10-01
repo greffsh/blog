@@ -6,6 +6,7 @@
 ```sh
 gleam add lustre_blog@1
 ```
+
 ```gleam
 import lustre_blog
 
@@ -38,8 +39,4 @@ In another terminal, serve the generated site locally:
 python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-Open <http://127.0.0.1:8000> and refresh the browser after a rebuild. Run tests with:
-
-```sh
-gleam test
-```
+Open <http://127.0.0.1:8000> and refresh the browser after a rebuild.

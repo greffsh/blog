@@ -9,6 +9,8 @@ import markdown.{type Post}
 const posts_per_page = 12
 
 pub fn page(posts: List(Post)) -> Element(a) {
+  let listed_posts = list.filter(posts, fn(post) { post.listed })
+
   html.html([attribute.attribute("lang", "en")], [
     html.head([], [
       html.meta([attribute.charset("UTF-8")]),
@@ -36,9 +38,9 @@ pub fn page(posts: List(Post)) -> Element(a) {
           ]),
           html.section(
             [attribute.class("post-list")],
-            list.index_map(posts, render_post_item),
+            list.index_map(listed_posts, render_post_item),
           ),
-          case list.length(posts) > posts_per_page {
+          case list.length(listed_posts) > posts_per_page {
             True ->
               html.button(
                 [
