@@ -4,7 +4,7 @@ description: "On recurring industry patterns"
 pubDate: "2026-10-02"
 ---
 
-# Let Clankers do Clanker Work.
+# Let Clankers do Clanker Work
 
 Things change, sometimes they change over the years, sometimes they change unexpectedly, out of nowhere, some might say, and I do think that today it is common sense that the world we knew has changed quite a bit. We, as programmers, grew up chasing the frontier; faster machines, cleaner OSes, new languages. That "conqueror" itch is still there.
 
