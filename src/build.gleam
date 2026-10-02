@@ -10,6 +10,7 @@ const posts_dir = "./content"
 
 pub fn main() {
   let assert Ok(_) = simplifile.create_directory_all("./dist")
+  let assert Ok(_) = simplifile.clear_directory("./dist")
   let assert Ok(_) = simplifile.copy_directory("./public", "./dist")
 
   let posts = markdown.load_posts(posts_dir)
