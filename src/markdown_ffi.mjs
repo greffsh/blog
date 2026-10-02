@@ -71,6 +71,16 @@ export function get_pub_date(md) {
 	return matter(md).data.pubDate ?? "";
 }
 
+export function format_pub_date(date) {
+	const parsed = new Date(`${date}T00:00:00Z`);
+	return new Intl.DateTimeFormat("en-US", {
+		month: "long",
+		day: "numeric",
+		year: "numeric",
+		timeZone: "UTC",
+	}).format(parsed);
+}
+
 export function is_listed(md) {
 	return matter(md).data.listed !== false;
 }

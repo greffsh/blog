@@ -3,7 +3,7 @@ import gleam/int
 import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
-import markdown.{type Post}
+import markdown.{type Post, format_pub_date}
 
 pub fn page(post: Post) -> Element(a) {
   html.html([attribute.attribute("lang", "en")], [
@@ -71,7 +71,7 @@ pub fn page(post: Post) -> Element(a) {
             element.unsafe_raw_html("div", "div", [], post.html),
           ]),
           html.p([attribute.class("post-pub-date")], [
-            element.text(post.pub_date),
+            element.text(format_pub_date(post.pub_date)),
           ]),
         ]),
       ]),

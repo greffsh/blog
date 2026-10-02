@@ -4,7 +4,7 @@ import gleam/list
 import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
-import markdown.{type Post}
+import markdown.{type Post, format_pub_date}
 
 const posts_per_page = 12
 
@@ -78,7 +78,7 @@ fn render_post_item(post: Post, index: Int) -> Element(a) {
       ],
       [
         html.h2([attribute.class("post-title")], [element.text(post.title)]),
-        html.p([attribute.class("post-date")], [element.text(post.pub_date)]),
+        html.p([attribute.class("post-date")], [element.text(format_pub_date(post.pub_date))]),
       ],
     ),
   ])

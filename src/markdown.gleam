@@ -32,6 +32,9 @@ fn do_get_description(md: String) -> String
 @external(javascript, "./markdown_ffi.mjs", "get_pub_date")
 fn do_get_pub_date(md: String) -> String
 
+@external(javascript, "./markdown_ffi.mjs", "format_pub_date")
+pub fn format_pub_date(date: String) -> String
+
 @external(javascript, "./markdown_ffi.mjs", "is_listed")
 fn do_is_listed(md: String) -> Bool
 
