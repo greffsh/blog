@@ -1,10 +1,10 @@
 ---
-title: "Let clankers do clanker's work"
+title: "Let clankers do clanker work"
 description: "On recurring industry patterns"
 pubDate: "2026-10-02"
 ---
 
-# Let Clankers do Clanker's Work.
+# Let Clankers do Clanker Work.
 
 Things change, sometimes they change over the years, sometimes they change unexpectedly, out of nowhere, some might say, and I do think that today it is common sense that the world we knew has changed quite a bit. We, as programmers, grew up chasing the frontier; faster machines, cleaner OSes, new languages. That "conqueror" itch is still there.
 
@@ -20,6 +20,6 @@ There is some kind of grief to be overcome, but personally I do think that we sh
 
 I'm not that experienced in the field, and I wasn't yet alive (or at least conscious!) through the past technological revolutions to appreciate what we now take for granted, but we can all agree that things come and go, workflows change, necessities change, and this is true for us, even if we were to make the computer dance, that doesn't change the fact that we are susceptible to change as well, just like spreadsheets for finance/accounting or 3D software for physical engineering.
 
-Notice the pattern, calculations (or computations) became cheaper, so modelling data and judgment became way more important. In a world with cheap intelligence, taste (read as high quality mental models) might matter more than ever. I'm not pretending to know how this all plays out, what I'm trying to say is that humanity's tooling will increasingly be, and behave, in a more sophisticated manner, but this very same tooling does not come as equalizers, but rather **multipliers**. Clankers did offer us leveled access, anyone with a 20-buck subscription can do a lot more, can learn at a faster pace, but the output is not equal, even in a world where intelligence is abundant. There are no leveled outcomes, so please, let clankers do clanker's work, and stop yelling at clouds.
+Notice the pattern, calculations (or computations) became cheaper, so modelling data and judgment became way more important. In a world with cheap intelligence, taste (read as high quality mental models) might matter more than ever. I'm not pretending to know how this all plays out, what I'm trying to say is that humanity's tooling will increasingly be, and behave, in a more sophisticated manner, but this very same tooling does not come as equalizers, but rather **multipliers**. Clankers did offer us leveled access, anyone with a 20-buck subscription can do a lot more, can learn at a faster pace, but the output is not equal, even in a world where intelligence is abundant. There are no leveled outcomes, so please, let clankers do clanker work, and stop yelling at clouds.
 
 ![this endless sky is driving me insane](/images/clouds.png)
