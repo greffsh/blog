@@ -22,4 +22,4 @@ I'm not that experienced in the field, and I wasn't yet alive (or at least consc
 
 Notice the pattern, calculations (or computations) became cheaper, so modelling data and judgment became way more important. In a world with cheap intelligence, taste (read as high quality mental models) might matter more than ever. I'm not pretending to know how this all plays out, what I'm trying to say is that humanity's tooling will increasingly be, and behave, in a more sophisticated manner, but this very same tooling does not come as equalizers, but rather **multipliers**. Clankers did offer us leveled access, anyone with a 20-buck subscription can do a lot more, can learn at a faster pace, but the output is not equal, even in a world where intelligence is abundant. There are no leveled outcomes, so please, let clankers do clanker's work, and stop yelling at clouds.
 
-![this endless blue sky is driving me insane](/images/clouds.png)
+![this endless sky is driving me insane](/images/clouds.png)
