@@ -1,7 +1,7 @@
 ---
 title: "Understanding JavaScript Execution"
 description: "How does JavaScript run?"
-pubDate: "2025-01-15"
+pubDate: "2025-05-15"
 ---
 
 # What Is a Runtime?
@@ -27,11 +27,11 @@ Each autonomous executor of JavaScript is called an **agent**, which maintains i
 
 ## Heap
 
-The heap is not an unknown concept to anyone slightly familiar with computer science. It is basically a large unstructured region of memory that gets populated with objects as needed. As we are talking about multiple agents, notice that in a shared memory context, each agent has its own heap with a `SharedArrayBuffer` object that provides a way of passing data between different agents.
+The heap is not an unknown concept to anyone slightly familiar with computer science. It is basically a large unstructured region of memory that gets populated with objects as needed. In a shared memory context, each agent has its own heap and its own `SharedArrayBuffer` object, but these objects can refer to the same underlying memory.
 
 ## Event Loop and Queues
 
-The **event loop** is the mechanism that coordinates interactions between the call stack and the task queues, which enables async programming. While JavaScript is single-threaded, the event loop allows it to perform non-blocking operations by offloading tasks (jobs) to the runtime APIs and processing their callbacks when they complete.
+The **event loop** coordinates the execution of queued work. Within each agent, JavaScript executes one piece of code at a time. Runtime APIs handle asynchronous operations, such as timers and network requests, and schedule the corresponding callbacks for later execution.
 
 A job is a unit of work that is queued to be executed asynchronously. It is scheduled to be run later, not immediately in the current execution context. There are two main types of jobs:
 
@@ -96,6 +96,8 @@ g.next(); // logs 2
 We've already covered the stack and the possibility of a stack overflow error. A function call is a tail call if the caller does nothing after the call except return the value, something quite common in recursive functions.
 
 ```ts
+"use strict";
+
 function factorial(n, acc = 1) {
   if (n <= 1) return acc;
   return factorial(n - 1, n * acc);
@@ -108,11 +110,13 @@ In the example above, the `factorial` function uses a tail call because the recu
 
 **Note:** While tail call optimization is part of the ECMAScript specs, most js engines don't implement it. The example above would still cause stack overlows with larger inputs in most environments
 
-### Never blocking
+### Non-blocking I/O
 
 One of the most important attributes of the event loop is its non-blocking nature. Handling things like I/O is typically performed via callbacks, so when the application is waiting for a query or a fetch to return, it can still process other code.
 
 The code executed after the completion of an asynchronous action is always provided as a callback function (e.g., .then()) which defines a new job to be added to the job queue. This characteristic requires the whole platform to be inherently asynchronous (except for some legacy APIs).
+
+However, JavaScript code can still block the event loop. A long-running loop, an expensive calculation, or a synchronous API call can prevent the agent from processing other work until it finishes. Using a callback or marking a function as async does not automatically make its execution non-blocking.
 
 # Why All of This Matters
 
@@ -120,7 +124,7 @@ The event loop's non-blocking nature, combined with the call stack's execution c
 
 By understanding how execution contexts are created and destroyed, and how optimizations like tail call optimization work, you can write more performant code and better debug issues when they arise.
 
-Also, is cool :)
+Also, it's cool :)
 
 <hr />
 
