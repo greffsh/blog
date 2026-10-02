@@ -16,11 +16,7 @@ const nav_links = [
     label: "~/books",
     is_external: True,
   ),
-  Link(
-    href: "https://github.com/VitorGreff",
-    label: "~/code",
-    is_external: True,
-  ),
+  Link(href: "https://github.com/greffsh", label: "~/code", is_external: True),
   Link(href: "/resume.pdf", label: "~/resume", is_external: True),
 ]
 
