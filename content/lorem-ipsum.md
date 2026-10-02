@@ -2,6 +2,7 @@
 title: "Lorem Ipsum: A Markdown Showcase"
 description: "Testing all markdown features with lorem ipsum content"
 pubDate: "2025-05-01"
+listed: false
 ---
 
 # Lorem Ipsum
@@ -43,7 +44,9 @@ Lorem ipsum dolor sit amet, **bold text here**, and some _italic text_ as well. 
 ```javascript
 function loremIpsum(words) {
   const lorem = ["lorem", "ipsum", "dolor", "sit", "amet"];
-  return Array.from({ length: words }, (_, i) => lorem[i % lorem.length]).join(" ");
+  return Array.from({ length: words }, (_, i) => lorem[i % lorem.length]).join(
+    " ",
+  );
 }
 
 const result = loremIpsum(5);
@@ -76,9 +79,17 @@ curl -s https://loremipsum.io/api | jq '.text'
 
 ### Golang
 
-```golang
+```go
 func main(){
   fmt.println("Hello world")
+}
+```
+
+### rust
+
+```rust
+pub fn main(){
+  println!("Hello world");
 }
 ```
 
